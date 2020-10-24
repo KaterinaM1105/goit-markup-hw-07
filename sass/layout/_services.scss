@@ -1,0 +1,49 @@
+.services .container {
+  display: block;
+}
+
+.services-images {
+  display: flex;
+  font-size: 0;
+}
+.services-item {
+  display: flex;
+  margin-right: 30px;
+}
+.services-item:nth-child(3n) {
+  margin-right: 0;
+}
+.services-title {
+  color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.services-overlay {
+  position: relative;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 27px 0;
+  font-size: 16px;
+  font-weight: 700px;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  background-color: $services-overlay;
+  color: $overlay-text;
+  width: 370px;
+  height: 70px;
+}

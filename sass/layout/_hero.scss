@@ -1,0 +1,22 @@
+.hero {
+  margin: 0 auto;
+  max-width: 1600px;
+  background-image: linear-gradient($gradient-color, $gradient-color),
+    url("../images/hero/hero.png");
+}
+.hero .container {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero-title {
+  color: $white-color;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  letter-spacing: 0.06em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
