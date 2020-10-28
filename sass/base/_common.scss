@@ -25,6 +25,12 @@ img {
     padding-top: 32px;
     padding-bottom: 32px;
   }
+  .button-element & {
+    display: block;
+
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
 }
 .address {
   font-style: normal;

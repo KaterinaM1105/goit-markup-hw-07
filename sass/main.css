@@ -51,6 +51,12 @@ img {
   padding-bottom: 32px;
 }
 
+.button-element .link {
+  display: block;
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
 .address {
   font-style: normal;
 }
@@ -93,6 +99,21 @@ img {
   margin-right: auto;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.hero .container {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.portfolio .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* ====== HERO BUTTON ====== */
@@ -613,12 +634,6 @@ img {
   max-width: 1600px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero.png");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero.png");
-}
-
-.hero .container {
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 .hero-title {
