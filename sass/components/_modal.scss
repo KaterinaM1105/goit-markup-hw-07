@@ -40,20 +40,20 @@
     margin-top: 4px;
     padding-left: 42px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &_input:hover,
-  &_input:focus {
-    border: 1px solid $accent-color;
-    outline: none;
-  }
-  &_input:required:focus:valid:not(:placeholder-shown) {
-    border: 1px solid $green-color;
-  }
-  &_input:required:focus:invalid:not(:placeholder-shown) {
-    border: 1px solid $red-color;
-  }
-  &_input:focus + .modal-name-icon {
-    fill: $accent-color;
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+      outline: none;
+    }
+    &:required:focus:valid:not(:placeholder-shown) {
+      border: 1px solid $green-color;
+    }
+    &:required:focus:invalid:not(:placeholder-shown) {
+      border: 1px solid $red-color;
+    }
+    &:focus + .modal-name-icon {
+      fill: $accent-color;
+    }
   }
   &_wrapper {
     display: block;
