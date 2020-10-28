@@ -1,24 +1,86 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background-color: $white-color;
+  transition: all 250ms linear 250ms;
+  padding: 40px;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 250ms linear 0ms;
+  }
+}
+
 .modal-form {
   display: flex;
   flex-direction: column;
   position: fixed;
-}
-.modal-form_input {
-  display: block;
-  width: 100%;
-  height: 40px;
-  border: 1px solid $modal-border-color;
-  border-radius: 4px;
-  margin-top: 4px;
-  padding-left: 42px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-name-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  color: $title-text-color;
+
+  &_input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $modal-border-color;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 42px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &_wrapper {
+    display: block;
+    position: relative;
+  }
+  &_input:hover,
+  &_input:focus {
+    border: 1px solid $accent-color;
+  }
+  &_input:focus,
+  &_message:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+  & .modal-name-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: $title-text-color;
+  }
+  &_message:placeholder-shown {
+    border: 1px solid $modal-border-color;
+  }
+  &_message {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    padding-top: 12px;
+    height: 120px;
+    color: $comments-text-color;
+    border-radius: 4px;
+    resize: none;
+  }
+  &_message:hover,
+  &_message:focus {
+    border: 1px solid $accent-color;
+  }
+  &_input:required:focus:valid:not(:placeholder-shown) {
+    border: 1px solid $green-color;
+  }
+  &_input:required:focus:invalid:not(:placeholder-shown) {
+    border: 1px solid $red-color;
+  }
+  &_input:focus + .modal-name-icon {
+    fill: $accent-color;
+  }
+  &_button {
+    display: flex;
+    align-self: center;
+    margin-top: 30px;
+  }
 }
 .modal-title {
   display: flex;
@@ -28,69 +90,29 @@
   line-height: 14px;
   color: $primary-text-color;
   margin-top: 10px;
+
+  &:first-child {
+    margin-top: 12px;
+  }
 }
-.modal-title:first-child {
-  margin-top: 12px;
-}
-.modal-form_wrapper {
-  display: block;
-  position: relative;
-}
-.modal-policy_checkbox::before {
-  display: inline-block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  margin-right: 8.38px;
-  outline: 1px solid $title-text-color;
-}
-.modal-form_policy:checked + .modal-policy_checkbox::before {
-  background-image: url(../images/sprite/check.svg);
-  background-color: $accent-color;
-  outline: none;
-}
-.modal-form_input:hover,
-.modal-form_input:focus {
-  border: 1px solid $accent-color;
-}
-.modal-form_input:focus,
-.modal-form_message:focus {
-  outline: none;
-  border: 1px solid $accent-color;
-}
-.modal-form_input:focus + .modal-name-icon {
-  fill: $accent-color;
-}
-.modal-form_input:required:focus:valid:not(:placeholder-shown) {
-  border: 1px solid $green-color;
-}
-.modal-form_input:required:focus:invalid:not(:placeholder-shown) {
-  border: 1px solid $red-color;
-}
-.modal-form_message:placeholder-shown {
-  border: 1px solid $modal-border-color;
-}
-.modal-form_message {
-  margin-top: 4px;
-  margin-bottom: 20px;
-  padding-left: 16px;
-  padding-top: 12px;
-  height: 120px;
-  color: $comments-text-color;
-  border-radius: 4px;
-  resize: none;
-}
-.modal-form_message:hover,
-.modal-form_message:focus {
-  border: 1px solid $accent-color;
-}
-.policy-text {
-  font-weight: 400;
-  font-size: 14px;
-  color: $primary-text-color;
-}
-.modal-form_button {
-  display: flex;
-  align-self: center;
-  margin-top: 30px;
+.modal-policy {
+  &_checkbox::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 15px;
+    margin-right: 8.38px;
+    outline: 1px solid $title-text-color;
+
+    .modal-form_policy:checked + & {
+      background-image: url(../images/sprite/check.svg);
+      background-color: $accent-color;
+      outline: none;
+    }
+  }
+  &-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $primary-text-color;
+  }
 }
