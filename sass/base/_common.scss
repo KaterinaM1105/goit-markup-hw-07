@@ -19,6 +19,12 @@ img {
 }
 .link {
   text-decoration: none;
+  .nav-list &,
+  .header-contacts & {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .address {
   font-style: normal;

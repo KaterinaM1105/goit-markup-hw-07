@@ -42,15 +42,15 @@
   width: 18px;
   height: 18px;
   fill: $close-x;
-}
-.close-svg:hover,
-.close-svg:focus {
-  fill: $accent-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 /* ====== SUBSCRIBE BUTTON ====== */
-.subscribe-button,
-.modal-form-button {
+.subscribe-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,12 +69,10 @@
   font-size: 16px;
   color: $white-color;
   cursor: pointer;
-}
-.subscribe-button:hover,
-.subscribe-button:focus,
-.modal-form_button:hover,
-.modal-form_button:focus {
-  background-color: $white-color;
-  color: $accent-color;
-  fill: $accent-color;
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    color: $accent-color;
+    fill: $accent-color;
+  }
 }
