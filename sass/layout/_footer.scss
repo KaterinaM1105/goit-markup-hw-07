@@ -1,12 +1,5 @@
 /* ====== CONTACTS ====== */
-.contacts .container {
-  display: flex;
-  align-items: baseline;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+
 .section-details {
   display: block;
 }
@@ -17,10 +10,10 @@
   letter-spacing: 0.03em;
   padding-top: 20px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address:hover,
-.address:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 .footer-address {
   margin-bottom: 9px;
@@ -32,40 +25,72 @@
   font-weight: 400;
   letter-spacing: 0.03em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.contact-details:hover,
-.contact-details:focus {
-  color: $accent-color;
-}
+
 /* ======= END CONTACTS ========= */
 /* ======= JOIN US ========= */
 .join-us {
   margin-left: 70px;
+  &-title {
+    display: flex;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-style: none;
+  }
 }
-.join-us-title {
-  display: flex;
-  color: $white-color;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-  font-style: none;
-}
+
 /* ==== FOOTER SOCIAL LISTS ==== */
 .footer-list-item {
   margin-left: 10px;
+  &:first-child {
+    margin-left: 0px;
+  }
 }
-.footer-list-item:first-child {
-  margin-left: 0px;
-}
-.social-list-item:hover .footer-social-svg,
-.social-list-item:focus .social-list-svg {
+
+.social-list-item:hover .footer-social-svg {
   fill: $white-color;
 }
 /* ======= SUBSCRIBE ======== */
 .subscribe-form {
   display: flex;
+  &_input {
+    display: flex;
+    width: 358px;
+    height: 50px;
+    margin-left: 93px;
+    background-color: transparent;
+    border: 1px solid $subscribe-form-border;
+    border-radius: 4px;
+    padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    transition: boder-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: $white-color;
+    &:hover,
+    &:focus {
+      border-color: $subscribe-border-hover;
+      box-shadow: $border-box-shadow;
+      cursor: pointer;
+    }
+  }
+  &_input:focus {
+    outline: none;
+    border: 1px solid $subscribe-border-hover;
+  }
+  &_input:required:focus:valid:not(:placeholder-shown) {
+    border: 1px solid $green-color;
+  }
+  &_input:required:focus:invalid:not(:placeholder-shown) {
+    border: 1px solid $red-color;
+  }
 }
 .subscribe-title {
   display: flex;
@@ -78,34 +103,4 @@
   text-transform: uppercase;
   padding-bottom: 20px;
   font-style: none;
-}
-.subscribe-form_input {
-  display: flex;
-  width: 358px;
-  height: 50px;
-  margin-left: 93px;
-  background-color: transparent;
-  border: 1px solid $subscribe-form-border;
-  border-radius: 4px;
-  padding-left: 16px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  transition: boder-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: $white-color;
-}
-.subscribe-form_input:focus {
-  outline: none;
-  border: 1px solid $subscribe-border-hover;
-}
-.subscribe-form_input:required:focus:valid:not(:placeholder-shown) {
-  border: 1px solid $green-color;
-}
-.subscribe-form_input:required:focus:invalid:not(:placeholder-shown) {
-  border: 1px solid $red-color;
-}
-.subscribe-form_input:hover,
-.subscribe-form_input:focus {
-  border-color: $subscribe-border-hover;
-  box-shadow: $border-box-shadow;
-  cursor: pointer;
 }
