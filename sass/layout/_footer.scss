@@ -1,5 +1,4 @@
 /* ====== CONTACTS ====== */
-
 .section-details {
   display: block;
 }
@@ -30,8 +29,6 @@
     color: $accent-color;
   }
 }
-
-/* ======= END CONTACTS ========= */
 /* ======= JOIN US ========= */
 .join-us {
   margin-left: 70px;
@@ -46,7 +43,6 @@
     font-style: none;
   }
 }
-
 /* ==== FOOTER SOCIAL LISTS ==== */
 .footer-list-item {
   margin-left: 10px;
@@ -54,7 +50,6 @@
     margin-left: 0px;
   }
 }
-
 .social-list-item:hover .footer-social-svg {
   fill: $white-color;
 }

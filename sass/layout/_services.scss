@@ -1,30 +1,29 @@
-.services .container {
-  display: block;
-}
-
-.services-images {
+.services {
   display: flex;
-  font-size: 0;
-}
-.services-item {
-  display: flex;
-  margin-right: 30px;
-}
-.services-item:nth-child(3n) {
-  margin-right: 0;
-}
-.services-title {
-  color: $title-text-color;
+  &-images {
+    display: flex;
+    font-size: 0;
+  }
+  &-item {
+    display: flex;
+    margin-right: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &-title {
+    color: $title-text-color;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.166;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-.services-overlay {
-  position: relative;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.166;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+  &-overlay {
+    position: relative;
+  }
 }
 .overlay-text {
   position: absolute;

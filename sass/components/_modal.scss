@@ -13,6 +13,19 @@
     transform: translate(-50%, -50%) scale(0);
     transition: all 250ms linear 0ms;
   }
+  &-title {
+    display: flex;
+    justify-content: start;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: $primary-text-color;
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 12px;
+    }
+  }
 }
 .modal-form {
   display: flex;
@@ -101,19 +114,6 @@
       color: $accent-color;
       fill: $accent-color;
     }
-  }
-}
-.modal-title {
-  display: flex;
-  justify-content: start;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: $primary-text-color;
-  margin-top: 10px;
-
-  &:first-child {
-    margin-top: 12px;
   }
 }
 .modal-policy {

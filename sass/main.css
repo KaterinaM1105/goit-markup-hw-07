@@ -116,6 +116,10 @@ img {
           align-items: center;
 }
 
+.services .container {
+  display: block;
+}
+
 /* ====== HERO BUTTON ====== */
 .button {
   background-color: #2196f3;
@@ -146,6 +150,7 @@ img {
   transition: all 250ms linear 250ms;
 }
 
+/* ====== CLOSE BUTTON ====== */
 .close-button {
   position: absolute;
   top: 8px;
@@ -221,6 +226,24 @@ img {
           transform: translate(-50%, -50%) scale(0);
   -webkit-transition: all 250ms linear 0ms;
   transition: all 250ms linear 0ms;
+}
+
+.modal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+  margin-top: 10px;
+}
+
+.modal-title:first-child {
+  margin-top: 12px;
 }
 
 .modal-form {
@@ -332,24 +355,6 @@ img {
   background-color: #ffffff;
   color: #2196f3;
   fill: #2196f3;
-}
-
-.modal-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: #757575;
-  margin-top: 10px;
-}
-
-.modal-title:first-child {
-  margin-top: 12px;
 }
 
 .modal-policy_checkbox::before {
@@ -712,8 +717,10 @@ img {
   background-image: url(../images/sprite/astronaut.svg);
 }
 
-.services .container {
-  display: block;
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .services-images {
@@ -952,7 +959,6 @@ img {
   color: #2196f3;
 }
 
-/* ======= END CONTACTS ========= */
 /* ======= JOIN US ========= */
 .join-us {
   margin-left: 70px;
