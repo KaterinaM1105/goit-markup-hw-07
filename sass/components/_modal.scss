@@ -103,8 +103,7 @@
 
     fill: $white-color;
     padding-right: 13px;
-    font-weight: 700;
-    font-size: 16px;
+    @include font(700, 16px);
     color: $white-color;
     cursor: pointer;
 
@@ -132,8 +131,7 @@
     }
   }
   &-text {
-    font-weight: 400;
-    font-size: 14px;
+    @include font(400, 14px);
     color: $primary-text-color;
   }
 }

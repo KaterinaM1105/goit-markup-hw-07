@@ -62,8 +62,7 @@
 
   fill: $white-color;
   padding-right: 13px;
-  font-weight: 700;
-  font-size: 16px;
+  @include font(700, 16px);
   color: $white-color;
   cursor: pointer;
   &:hover,
